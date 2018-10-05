@@ -1,0 +1,7 @@
+{
+  "name": "aulaIonic1",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
