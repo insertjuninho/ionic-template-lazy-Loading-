@@ -7,12 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Categorias</ion-title>
+    <ion-title>Galeria</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-list *ngFor="let f of fotos">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img (click)="navFotoDetalhes(f)" src="../../assets/imgs/{{f.imagem}}">
+          </ion-thumbnail>
+          <h2>{{f.titulo}}</h2>
+          <p>{{f.descricao}}</p>
+          
+        </ion-item>
+      </ion-list>
+    
+    </ion-content>
 
-</ion-content>
+

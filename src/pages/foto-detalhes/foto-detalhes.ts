@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FOTOS } from '../../confi/api-config';
 import { Fotos } from '../../model/foto';
 
 /**
- * Generated class for the CategoriasPage page.
+ * Generated class for the FotoDetalhesPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -12,20 +11,16 @@ import { Fotos } from '../../model/foto';
 
 @IonicPage()
 @Component({
-  selector: 'page-categorias',
-  templateUrl: 'categorias.html',
+  selector: 'page-foto-detalhes',
+  templateUrl: 'foto-detalhes.html',
 })
-export class CategoriasPage {
-  
+export class FotoDetalhesPage {
+  fotos : Fotos;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.fotos = this.navParams.get('fotos');
+   
   }
+
  
-  fotos: Fotos[] = FOTOS;
-
-  navFotoDetalhes(fotos : Fotos){
-    this.navCtrl.push("FotoDetalhesPage",{fotos : fotos});
-  
-  }
-
 }
